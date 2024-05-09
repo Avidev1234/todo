@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function TodoItem({todoName,todoDate}) {
+function TodoItem({todoName,todoDate,onDeleteclick}) {
 
     return (
         <div className="Container border ">
@@ -12,7 +12,7 @@ function TodoItem({todoName,todoDate}) {
                     {todoDate}
                 </div>
                 <div className="col-2 ">
-                    <button type="button" className="btn btn-danger kg-button">Delete</button>
+                    <button type="button" className="btn btn-danger kg-button" onClick={()=>onDeleteclick(todoName)}>Delete</button>
                 </div>
             </div>  
         </div>
@@ -20,6 +20,7 @@ function TodoItem({todoName,todoDate}) {
 }
 TodoItem.propTypes = {
     todoName: PropTypes.string.isRequired,
-    todoDate: PropTypes.string.isRequired
+    todoDate: PropTypes.string.isRequired,
+    onDeleteclick: PropTypes.func.isRequired,
 };
 export default TodoItem;
