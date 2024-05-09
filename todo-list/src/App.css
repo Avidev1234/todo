@@ -1,0 +1,28 @@
+h1{
+    font-weight: 700;
+    font-size: 60px;
+    margin: 10px;
+    color: red;
+    margin-bottom: 20px;
+} 
+
+input{
+    width: 100%;
+}
+.items-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.kg-row{
+    margin: 10px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kg-button{
+   min-width: 91px; 
+}
