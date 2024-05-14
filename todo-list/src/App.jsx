@@ -20,7 +20,7 @@ function App() {
   const handledeleteItem=(tododItemName)=>{
     const newtodoItems=list.filter(item=>item.name!==tododItemName);
     setList(newtodoItems);
-    console.log(`Item deleted:${tododItemName}`);
+    // console.log(`Item deleted:${tododItemName}`);
   }
   return <center className="todo-container">
     <AppName />

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-
-function TodoItem({todoName,todoDate,onDeleteclick}) {
+import { MdDelete } from "react-icons/md";
+function TodoItem({ todoName, todoDate, onDeleteclick }) {
 
     return (
-        <div className="Container border ">
+        <div className="Container  ">
             <div className="row kg-row ">
                 <div className="col-4  ">
                     {todoName}
@@ -12,9 +12,10 @@ function TodoItem({todoName,todoDate,onDeleteclick}) {
                     {todoDate}
                 </div>
                 <div className="col-2 ">
-                    <button type="button" className="btn btn-danger kg-button" onClick={()=>onDeleteclick(todoName)}>Delete</button>
+                    <button type="button" className="btn btn-danger kg-button" onClick={() => onDeleteclick(todoName)}><MdDelete />
+                    </button>
                 </div>
-            </div>  
+            </div>
         </div>
     );
 }
